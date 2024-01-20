@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
 test('Client application', async({page})=>{
-    const emailId = 'vsvatheking@gmail.com';
+    const emailId = 'kovey86773@grassdev.com';
     const productName = 'IPHONE 13 PRO';
     const cardTitles = page.locator('div.card-body b');
     const cardBody = page.locator('div.card-body'); 
@@ -26,7 +26,7 @@ test('Client application', async({page})=>{
     
     await page.goto('https://rahulshettyacademy.com/client');
     await page.getByPlaceholder('email@example.com').fill(emailId);
-    await page.locator('input#userPassword').fill('Rockvibin123');
+    await page.locator('input#userPassword').fill('NoPeaking>--<');
     await page.locator("[value='Login']").click();
     await cardTitles.first().waitFor();
     console.log(await cardTitles.allTextContents());

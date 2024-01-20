@@ -17,7 +17,7 @@ test('Angular application test', async function({browser}){
 
     await page.goto('https://rahulshettyacademy.com/angularpractice/');
     await nameField.fill('Vibin Abishek Vijayakumar');
-    await emailField.fill('vsvatheking@gmail.com');
+    await emailField.fill('kovey86773@grassdev.com');
     await passwordField.fill('rahulshettyacademy');
     await checkBoxx.check();
     await genderSelect.selectOption('Male');

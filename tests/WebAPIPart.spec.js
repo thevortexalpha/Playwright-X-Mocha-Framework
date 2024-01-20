@@ -11,32 +11,7 @@ let response;
 test.beforeAll(async ()=>{
     const apiContext = await request.newContext();
     const apiUtils = new APIUtils(apiContext, loginPayload);
-    // token = await apiUtils.getToken();
     response = await apiUtils.createOrder(orderPayload);
-    // const loginResponse = await apiContext.post(
-    //     "https://rahulshettyacademy.com/api/ecom/auth/login", 
-    //     {data: loginPayload}
-    // )
-    // expect(loginResponse.ok()).toBeTruthy();
-    // const loginResponseJson = await loginResponse.json();
-    // token = loginResponseJson.token;
-    // console.log('Token is '+token);
-    
-    // const orderResponse = await apiContext.post(
-    //     "https://rahulshettyacademy.com/api/ecom/order/create-order",
-    //     {
-    //         data: orderPayload,
-    //         headers: {
-    //             'Authorization': token,
-    //             'Content-Type' : 'application/json'
-    //         }
-    //     }
-    // )
-    // // console.log('the response 0 is '+orderResponse);
-    // const orderResponseJson = await orderResponse.json();
-    // // console.log('the response is '+orderResponseJson);
-    // orderId = orderResponseJson.orders[0];
-    // console.log('Order id is '+orderId);
 })
 
 test('Client application', async({page})=>{
@@ -55,7 +30,6 @@ test('Client application', async({page})=>{
     
     await orderHistory.click();
     await orderIds.nth(0).waitFor();
-    // await page.locator("tbody").waitFor();
     var itemCount = await orderIds.count();
     for(var i=0; i<itemCount; i++){
         var currentText = await orderIds.nth(i).textContent();
