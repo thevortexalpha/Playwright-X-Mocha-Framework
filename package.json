@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/WebAPIPart2.spec.js"
+    "clientApp": "npx playwright test tests/ClientAppPO.spec.js",
+    "Angular": "npx playwright test tests/AngularApp.spec.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,7 @@
   "devDependencies": {
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.10.6",
-    "allure-commandline": "^2.25.0",
-    "allure-playwright": "^2.10.0"
+    "allure-commandline": "^2.26.0",
+    "allure-playwright": "^2.11.1"
   }
 }

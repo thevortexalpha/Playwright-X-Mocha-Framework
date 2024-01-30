@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
+test.describe.configure({mode: 'parallel'});
 test('Full screen screenshot', async function({browser}){
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -26,7 +27,7 @@ test('Locator screenshot', async function({browser}){
 
 });
 
-test.only('Visual testing', async function({browser}){
+test('Visual testing', async function({browser}){
     const context = await browser.newContext();
     const page = await context.newPage();
 
