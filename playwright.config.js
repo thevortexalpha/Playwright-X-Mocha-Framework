@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  testMatch: 'UploadDownload.spec.js',
+  testMatch: 'Calendar.spec.js',
   retries: 0,
   workers: 5,
   timeout: 30 * 1000,
