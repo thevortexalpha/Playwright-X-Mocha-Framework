@@ -15,5 +15,8 @@
     "@types/node": "^20.10.6",
     "allure-commandline": "^2.26.0",
     "allure-playwright": "^2.11.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
   }
 }
