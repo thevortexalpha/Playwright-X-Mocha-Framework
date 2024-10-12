@@ -23,7 +23,7 @@ module.exports = defineConfig({
         '--start-maximized'
       ],
     },
-    headless: false,
+    headless: true,
     viewport:null,
     actionTimeout: 10 * 1000,
     navigationTimeout: 10 * 1000,
