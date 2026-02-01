@@ -1,3 +1,4 @@
+import 'dotenv/config'
 const { test, expect } = require('@playwright/test');
 
 test('Angular application test', async function({browser}){
@@ -15,10 +16,10 @@ test('Angular application test', async function({browser}){
     const shopLink = page.getByRole('link', {name: 'Shop'});
     const nokiaPhoneAdd = page.locator('app-card').filter({hasText: 'Nokia Edge'}).getByRole('button',{name:'Add'});
 
-    await page.goto('https://rahulshettyacademy.com/angularpractice/');
-    await nameField.fill('Vibin Abishek Vijayakumar');
-    await emailField.fill('kovey86773@grassdev.com');
-    await passwordField.fill('rahulshettyacademy');
+    await page.goto(process.env.ANGULAR_PRACTICE);
+    await nameField.fill(process.env.AP_USERNAME);
+    await emailField.fill(process.env.AP_EMAIL);
+    await passwordField.fill(process.env.AP_PASSWORD);
     await checkBoxx.check();
     await genderSelect.selectOption('Male');
     await employmentStatus.check();

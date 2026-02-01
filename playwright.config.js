@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  testMatch: 'Calendar.spec.js',
+  testMatch: 'AngularApp.spec.js',
   retries: 0,
   workers: 5,
   timeout: 30 * 1000,
